@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery selectors part 1</title>
+	<!--jQuery selectors allow you to select and manipulate HTML element(s). 
+		jQuery selectors are used to "find" (or select) HTML elements based on their name, id, classes, types, attributes, values of attributes and much more. It's based on the existing CSS Selectors, and in addition, it has some own custom selectors.-->
+</head>
+<body>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<h1 id="firsth1">Selectors for JQuery</h1>
+	<h1 class="first">Selectors for JQuery</h1>
+	<h1 class="first">Selectors for JQuery</h1>
+	<div class="first">
+		<p>This is my para dont touch it.,</p>
+	</div>
+	<button onclick="fn1()" id="btn">Submit</button>
+
+<script src="jquery.js"></script>
+<script type="text/javascript">
+	function fn1()
+	{
+       $(".first").fadeToggle();
+	}
+</script>
+</body>
+</html>

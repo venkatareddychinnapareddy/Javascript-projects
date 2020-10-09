@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scope of variables Array</title>
+	<script type="text/javascript">
+		/*Arrays in JS*/
+		var car1="Mercedes"
+		var car2="Audi";
+		var car3="BMW";
+                //  0            1         2
+		var cars=["Mercedes" , "Audi" , "BMW"];
+		cars.push("Benz")
+
+		var arr1= new Array("Apple","Goa","Banana","Strawberry");
+		arr1.push("Pineapple")
+          /* this can be write alsolike this 
+                 var arr1;
+                arr1=new Array("Apple","Goa","Banana","Strawberry");*/
+		for (var i=0;i<5;i++)
+			/*can also be written like this 
+		  for (var i=0;i<arr1.length;i++)*/
+		{
+		   document.write("<h1>"+arr1[i]+"</h1>");
+		}
+	
+	</script>
+</head>
+<body>
+
+</body>
+</html>

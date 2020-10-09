@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery DOM Manipulations part 3</title>
+	<!--
+		.append() puts data inside an element at last index and
+        .prepend() puts the prepending element first index ie., initial para
+         .before() method inserts specified content in front of (before) the selected elements. 
+         .after() method inserts specified content outside the selected elements. .empty() method removes all child nodes and content from the selected elements
+     -->
+</head>
+<body>
+<link rel="stylesheet" type="text/css" href="style.css">
+<h1>JQuery DOM Manipulations part 3</h1>
+<button id="btn1">Append</button>
+<button id="btn2">After</button>
+<button id="btn3">Prepand</button>
+<button id="btn4">Before</button>
+<br><br>
+<button id="btn5">Remove</button>
+<button id="btn6">Empty</button>
+ <div id="div1" class="mdiv">
+     <p value="123456" id="p1" class="prk">This is my 1st <b>paragraph</b> ink and to me <i>welded</i> in div1</p>
+     <p value="123456" id="p2" class="vrt">This is my 1st <b>paragraph</b> ink and to me <i>welded</i> in div1</p>
+	</div>
+
+</body>
+<script src="jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+
+      $("#btn1").click(function(){
+
+      $("#div1").append("<p>This is is my second para in this data</p>");
+
+      })
+
+       $("#btn2").click(function(){
+
+      $("#div1").after("<p>This is is my second para in this data</p>");
+
+      })
+
+        $("#btn3").click(function(){
+
+      $("#div1").prepend("<p>This is is my second para in this data</p>");
+
+      })
+
+         $("#btn4").click(function(){
+
+      $("#div1").before("<p>This is is my second para in this data</p>");
+
+      })
+
+          $("#btn5").click(function(){
+
+      //$("#div1").remove();
+       $(".vrt,.prk").remove();
+
+
+      })
+
+           $("#btn6").click(function(){
+
+      $("#div1").empty();
+
+      })
+
+
+	})
+</script>
+</html>

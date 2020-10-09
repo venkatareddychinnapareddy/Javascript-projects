@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Regular Expressions in JS</title>
+	<script type="text/javascript">
+
+		 function validate()
+     {
+    	var username = document.getElementById("uname").value;
+
+            var regx = /[^100]bbc/i;   /*we can give our custom values in  [] within it and[^which are not be in front or started with that values r   numbers] */
+
+    	//regx = new RegExp("E00","i");
+       
+    	if(regx.test(username))
+    	{
+    		alert("Valid username");
+    	}
+    	else 
+    	{
+    		//alert("Invalid username");
+    		document.getElementById("llbuser").style.visibility="visible";
+    	}
+    }
+
+	</script>
+</head>
+<body>
+  <form>
+     <input id="uname" type="text" placeholder="Username">
+     <br>
+ <label  id="llbuser" style="color: red; visibility:hidden;">Invalid Username</label>
+<br>
+	<button onclick="validate()" type="Submit">Submit</button>
+</form>
+</body>
+</html>

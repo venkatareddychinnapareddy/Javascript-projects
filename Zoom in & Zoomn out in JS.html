@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Zoom in & Zoom out in JS</title>
+	<script type="text/javascript">
+	// setInterval()it repeats the text or number or any image of times on clicking r hover
+
+		var width = 100;
+        var difference = 2;
+        var intervalID = 0;
+      //  document.getElementById("img1").style.width=width;
+
+        function increase() 
+        {
+        	clearInterval(intervalID);
+        	intervalID=setInterval(zoomIn,20);
+        }
+     
+        function zoomIn()		
+        {
+        if (width<300) 	
+        {
+        	width = width+difference;
+        	document.getElementById("img1").width=width;
+        	console.log(width); // not much necessary
+        }
+        else
+        {
+        	clearInterval(intervalID);
+        }
+      }
+
+       function decrease() 
+        {
+        	clearInterval(intervalID);
+        	intervalID=setInterval(zoomOut,20);
+        }
+         function zoomOut()		
+  {
+        if (width>100) 	
+        {
+        	width = width-difference;
+        	document.getElementById("img1").width=width;
+        	console.log(width);
+        }
+        else
+        {
+        	clearInterval(intervalID);
+        }
+  }
+	</script>
+</head>
+<body>
+<br><br>
+
+<img onmouseover= "increase()" onmouseout= "decrease()" id="img1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ-55E1x9iyJ56QGG_F5hPxtGhKOmU0zVYIXA&usqp=CAU" width="100"/>
+
+</body>
+</html>

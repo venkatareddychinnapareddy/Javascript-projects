@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objects in JS P1</title>
+	<script type="text/javascript">
+		 
+     // The first case
+	   /* var car_brand = "Mercedes";
+		    var car_model = "G-series";
+	    	var price = 150000;
+
+		function  mercedesAutopilot()
+		{
+			document.write("<h1>This car has Auto Pilot</h1>");
+		}
+
+		  mercedesAutopilot(); */ 
+
+
+        //The second case
+          /* var car = {
+  
+        	car_brand : "Mercedes",
+        	car_model : "G-series",
+        	 price  :   1000,
+
+        	 mercedesAutopilot : function()
+        	 {
+        	 	document.write("<h1>This car has Auto Pilot</h1>");
+        	 }
+
+        }
+             document.write("<h1>"+car.car_brand+"</h1>");
+            car.mercedesAutopilot();*/
+
+               // The third case called object construction function
+               function  Cars(car_brand,car_model,price)
+               {
+               	this.car_brand=car_brand;
+               	this.car_model=car_model;
+               	this.price=price;
+               	this.mercedesAutopilot = function()
+               	{
+               	document.write("<h1>This car has Auto Pilot</h1>");
+               	}
+             }
+             var c1= new Cars("Mercedes","G-series",1000);
+             var c2= new Cars("Rolls Royce","Cullian",2000);
+             var c3= new Cars("Audi","A6",5000);
+             document.write("<h1>"+c1.car_brand+"</h1>")
+             document.write("<h1>"+c2.car_brand+"</h1>");
+             document.write("<h1>"+c3.car_brand+"</h1>");
+             c1.mercedesAutopilot();
+
+	
+
+ 
+	</script>
+</head>
+<body>
+
+</body>
+</html>

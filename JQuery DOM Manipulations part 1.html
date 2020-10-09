@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery DOM Manipulations part 1</title>
+	<!--
+		text(),html(),attr(),css()
+	-->
+</head>
+<body>
+<link rel="stylesheet" type="text/css" href="style.css">
+<h1>JQuery DOM Manipulations</h1>
+
+ <button id="btn1">Action</button>
+
+ <div id="div1" class="mdiv">
+
+		<p value="123456" id="p1">This is my 1st <b>paragraph</b> dont touch it <i>Venky</i> in div1</p>
+	</div>
+
+</body>
+<script src="jquery.js"></script>
+<script type="text/javascript">
+	$("document").ready(function() {
+	   
+     $("#btn1").click(function(){
+
+     //alert($("#p1").text()); // it gives the same para what u selected
+     //alert($("#p1").html());  // it gives enter para including b,i tags	
+      // alert($("#p1").attr("value")); // it give the attr value inside it
+     alert($("div").css("border")); // it gives text style information
+
+     })
+
+	})
+</script>
+</html>

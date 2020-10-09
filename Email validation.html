@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Email validation</title>
+	<script type="text/javascript">
+	/*
+	\d match any digit [0-9]
+   \w match any word character (a-z,A-Z,0-9)
+   email is divided in to 4 parts
+   1.Any letters numbers dots and/or hyphens
+   2.Any letter number and/or hyphens(-)
+   @
+   3.Any letter (a-z)
+   4. extension part a dot (.)then any letter it is onlyfpr extenstion 
+         eg:venky100@google.co.in   co.org
+   */
+	function validate()
+   {
+   	var text=document.getElementById("text1").value;
+    var regx=/^([\w\.-]+)@([\w\-]+).([a-z]{2,8})(.[a-z]{2,8})$/;
+    if (regx.test(text)) 
+    {
+       document.getElementById("ipl").innerHTML="Valid Email";
+       document.getElementById("ipl").style.visibility="visible";
+       document.getElementById("ipl").style.color="green";
+    }
+    else
+    {
+       document.getElementById("ipl").innerHTML="Invalid Email";
+       document.getElementById("ipl").style.visibility="visible";
+       document.getElementById("ipl").style.color="red";
+    }
+   }
+	</script>
+</head>
+<body>
+<form>
+	<input id="text1" type="Email" placeholder="Email">
+	<br><br>
+	<label id="ipl" style="color: red; visibility: hidden;">Invalid</label>
+	<button onclick=" validate()" type="button">Submit</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery DOM Manipulations part 2</title>
+</head>
+<body>
+<link rel="stylesheet" type="text/css" href="style.css">
+<h1>JQuery DOM Manipulations</h1>
+
+ <button id="btn1">Set Value</button>
+ <button id="btn2">Get Value</button>
+
+ <div id="div1" class="mdiv">
+
+		<p value="123456" id="p1">This is my 1st <b>paragraph</b> dont touch it <i>Venky</i> in div1</p>
+	</div>
+
+</body>
+<script src="jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function (){
+
+  $("#btn1").click(function(){
+
+        //alert($("#p1").attr("value"));
+        //$("#p1").attr("value","ok done");
+        $("#p1").css("font-size","35px");
+
+
+})
+		
+      $("#btn2").click(function(){
+
+      	alert($("#p1").css("font-size"));
+
+       //alert($("#p1").attr("value"));
+      // $("#p1").attr("value","venky");
+
+      })
+
+	})
+</script>
+</body>
+</html>

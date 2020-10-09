@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mobile validation</title>
+	<script type="text/javascript">
+
+   /* 
+   \d match any digit [0-9]
+   \w match any word character (a-z,A-Z,0-9)
+   \s match whitespace character (eg.spaces & tabs)
+   \t match a tab only
+   */		
+   function validate()
+   {
+   	var text=document.getElementById("text1").value;
+    var regx=/^[7-9]\d{9}$/;
+   //  var regx=/^[5-9][a-z]{8}[0]$/; task given to me
+    if (regx.test(text)) 
+    {
+       document.getElementById("ipl").innerHTML="Valid number";
+       document.getElementById("ipl").style.visibility="visible";
+       document.getElementById("ipl").style.color="green";
+    }
+    else
+    {
+       document.getElementById("ipl").innerHTML="Invalid number";
+       document.getElementById("ipl").style.visibility="visible";
+       document.getElementById("ipl").style.color="red";
+    }
+   }
+	</script>
+</head>
+<body>
+<form>
+	<input id="text1" type="text" placeholder="cellphone">
+	<br><br>
+	<label id="ipl" style="color: red; visibility: hidden;">Invalid</label>
+	<button onclick=" validate()" type="button">Submit</button>
+</form>
+</body>
+</html>

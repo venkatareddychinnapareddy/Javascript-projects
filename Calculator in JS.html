@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator in JS</title>
+	<script type="text/javascript">
+
+       /* parseInt for eg.2+2=4 but it not gives 21.2+2.2= it gives only 23
+      but parseFloat gives 2.2+2.2=4.4 
+          */
+         document.write("<h1>My Calculator</h1>").style.color="red";
+
+		function calc() 
+
+		{
+
+		var n1 = parseFloat(document.getElementById("n1").value);   
+		var n2 = parseFloat(document.getElementById("n2").value);
+		var oper = document.getElementById("operators").value;
+ 
+		if (oper === "+")
+		 {
+		 	document.getElementById("result").value = n1+n2;
+		
+		 }	
+		 if (oper === "-")
+		 {
+		 	document.getElementById("result").value = n1-n2;
+		
+		 }	
+		 if (oper === "*")
+		 {
+		 	document.getElementById("result").value = n1*n2;
+		
+		 }	
+		 if (oper === "/")
+		 {
+		 	document.getElementById("result").value = n1/n2;
+		
+		 }	
+		}
+
+	</script>
+</head>
+<body>
+<input type="text" id="n1">
+<br><br>
+<input type="text" id="n2">
+<br><br>
+<select id="operators">
+	<option value="+">+</option>
+    <option value="-">-</option>
+	<option value="*">*</option>
+	<option value="/">/</option>
+</select>
+<button onclick="calc()">=</button>
+<input type="text" id="result">
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Radiobuttons in JS</title>
+	<script type="text/javascript">
+	
+	function fn1()
+{
+	var p1=document.getElementById("p1");
+	var p2=document.getElementById("p2");
+	var p3=document.getElementById("p3");
+	var p4=document.getElementById("p4");
+      
+       if(p1.checked==true)
+      	    alert("The Processor selected is : "+p1.value);
+      else if(p2.checked==true)
+      		alert("The Processor selected is : "+p2.value);
+      else if(p3.checked==true)
+      		alert("The Processor selected is : "+p3.value);
+       else if(p4.checked==true)
+      		alert("The Processor selected is : "+p4.value);
+      	else
+      		alert("No Processor is selected");
+
+}
+
+
+	</script>
+</head>
+<body> 
+<input id="p1" type="radio" value="Snapdragon" name=Snapdragon>Snapdragon</input> 
+<br>
+<input id="p2" type="radio" value="Media-Tek" name=Snapdragon>Media-Tek</input>
+<br>
+<input id="p3" type="radio" value="Exynos" name=Snapdragon>Exynos</input>
+<br>
+<input id="p4"type="radio" value="Kirin" name=Snapdragon>Kirin</input>
+<br>
+<button onclick="fn1()" id="btn">Submit</button>
+</body>
+</html>

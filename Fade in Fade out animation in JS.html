@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fade in & Fade out animation using JS</title>
+<script type="text/javascript">
+
+	 /* if image is clearly visible then its opacity is 1 or visibility reduces     hence opacity is goes on reducing */
+
+	var opacity=0;
+	var intervalID=0;
+
+	function fadeOut() 
+	{
+	 intervalID=setInterval(hide,20);
+	}
+
+	function hide()
+	{
+		var img = document.getElementById("img1");
+		opacity = Number(window.getComputedStyle(img).getPropertyValue("opacity")); 
+
+		if (opacity>0) 
+		{
+			opacity=opacity-0.1;
+			img.style.opacity=opacity;
+			console.log(opacity);   // not much necessary
+		}
+		else
+		{
+			clearInterval(intervalID);
+		}
+	}
+
+    function fadeIn() 
+	{
+	 intervalID=setInterval(show,20);
+	}
+
+	function show()
+	{
+        var img = document.getElementById("img1");
+		opacity = Number(window.getComputedStyle(img).getPropertyValue("opacity")); 
+
+		if (opacity<1) 
+		{
+			opacity=opacity+0.1;
+			img.style.opacity=opacity;
+			console.log(opacity); // it is not much necessary just to view console   background code 
+		}
+		else
+		{
+			clearInterval(intervalID);
+		}
+	}
+
+</script>
+</head>
+<body>
+<button onclick="fadeOut()" id="btnAdd">Fade Out</button>
+<br><br>
+<img id="img1" src="https://hackernoon.com/hn-images/1*TYAzzTJ60x-qg5N81ElU9A.png" width="700">
+<br><br>
+<button onclick="fadeIn()" id="btnStop">Fade  In</button>
+</body>
+</html>

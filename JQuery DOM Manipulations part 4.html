@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery DOM Manipulations part 4</title>
+	<!--
+		.addClass() method adds one or more class names to the selected elements.
+		.removeClass() Remove a single class, multiple classes, or all classes from each element in the set of matched elements.
+		.toggleclass() Add or remove one or more classes from each element in the set of matched elements, 
+		css() method sets or returns one or more style properties for the selected elements. 
+	-->
+</head>
+<body>
+<link rel="stylesheet" type="text/css" href="style.css">
+<h1>JQuery DOM Manipulations part 3</h1>
+<button id="btn1">Add Class</button>
+<button id="btn2">Remove Class</button>
+<button id="btn3">Toggle Class</button>
+<button id="btn4">CSS</button>
+
+<div id="div1" class="mdiv">
+     <p value="123456" id="p1" class="prk">This is my 1st <b>paragraph</b> ink and to me <i>welded</i> in div1</p></div>
+
+   <div id="div2">
+   <p id="p2">This is my 1st <b>paragraph</b> ink and to me <i>welded</i> in div1</p>
+   </div>
+
+</body>
+<script src="jquery.js"></script>
+<script type="text/javascript">
+
+	$(document).ready(function() {
+		
+    $("#btn1").click(function(){
+
+     $("#div1").addClass("newdivclass newdivmass"); // we can apply 1 or more styles in 1 
+
+    });
+
+    $("#btn2").click(function(){
+
+     $("#div1").removeClass("newdivclass newdivmass");
+
+    });
+
+    $("#btn3").click(function(){
+
+     $("#div1").toggleClass("newdivclass newdivmass");
+
+    });
+
+       $("#btn4").click(function(){
+
+    	 $("#p1").css("font-size","35px");
+     
+          // alert($("#div1").css("color"))
+      
+    });
+
+
+	});
+</script>
+</html>

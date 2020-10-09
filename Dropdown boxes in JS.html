@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dropdown boxes in JS</title>
+	<script type="text/javascript">
+		function fn1()
+		{
+			 var select=document.getElementById("selectbox");
+             alert(select.options[select.selectedIndex].value);
+		}
+	</script>
+</head>
+<body>
+<select id="selectbox">
+	<option value="Venkat">Venkat</option>
+	<option value="Alicen">Alicen</option>
+	<option value="Kevin">Kevin</option>
+	<option value="Raghu">Raghu</option>
+</select>
+<br>
+<button onclick="fn1()">Submit</button>
+</body>
+</html>

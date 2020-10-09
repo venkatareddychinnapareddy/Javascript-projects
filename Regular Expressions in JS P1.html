@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Regular expressions in Js</title>
+    <script type="text/javascript">
+      	/* Regular expressions are used to perform powerfull pattern-matching search-and-replace functions on text
+      	E00 Venkata_reddy because some companies requires these type of usernames
+      	E01 venkat.Web Developer
+      	*/
+    function validate()
+     {
+    	var username = document.getElementById("uname").value;
+    	var regx = /E00/i;
+
+    	if(regx.test(username))
+    	{
+    		alert("Valid username");
+    	}
+    	else 
+    	{
+    		alert("Invalid username");
+    		document.getElementById("llbuser").style.display="block";
+    	}
+    }
+      </script>
+</head>
+<body>
+    <form>
+     <input id="uname" type="text" placeholder="Username">
+     <br>
+  <label   id="llbuser" style="color: red; display: none">Invalid Username</label>
+	<br>
+	<button onclick="validate()" type="Submit">Submit</button>
+</form>
+</body>
+</html>

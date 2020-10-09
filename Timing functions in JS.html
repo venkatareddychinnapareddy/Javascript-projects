@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Timing functions in JS</title>
+	<script type="text/javascript">
+		/*
+		1.setTimeout()shows the text that has been set a time
+		2.clearTimeout()stops the text out displaying before it appears
+		3.setInterval()it repeats the text n number of times on clicking
+		4.clearInterval()its stops the timer
+		*/
+		var ID=0;
+		var seconds=0;
+
+		 function printMsg()
+		 {
+			document.getElementById("op").innerHTML=seconds+" seconds";
+			seconds++;
+		}
+		  function start()
+		 {
+		  ID=window.setInterval(printMsg,1000);
+		 }
+		 function stop()
+		{
+			window.clearInterval(ID);
+		}
+
+		/* function printMsg()
+		 {
+			document.getElementById("op").innerHTML="Hello venkat 5 sec up";
+		}
+
+	1.	function Start()
+		{
+			ID=window.setTimeout(printMsg,5000);
+		}
+
+	2.	function stop()
+		{
+			window.clearTimeout(ID);
+		}*/	
+</script>
+</head>
+<body>
+<button onclick="start()" id="btnAdd">Start</button>
+<h1 id="op">Some text</h1>
+<button onclick="stop()" id="btnStop" >Stop</button>
+</body>
+</html>

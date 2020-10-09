@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM Manupulations & getelementbytagname </title>
+	<script type="text/javascript">
+		//*** DOM Manupulations & getElementsByTagName
+		
+		function changestyling()
+		{
+			var para = document.getElementsByTagName("p");
+
+		/*  para[0].style.fontSize = "25px"; //make sure S is capital
+			para[1].style.color = "blue";
+			para[2].style.fontWeight = "bold";
+			para[3].style.fontStyle= "Comic san Serif";
+			para[4].style.fontStyle = "italic"; */
+		
+		for (var i=0;i<para.length;i++)
+		{
+			para[i].style.color = "green";
+		}
+
+		}
+	</script>
+</head>
+<body>
+<p>This is Paragraph 1</p>
+
+<p>This is Paragraph 2</p>
+
+<p>This is Paragraph 3</p>
+
+<p>This is Paragraph 4</p>
+
+<p>This is Paragraph 5</p>
+<br>
+<button onclick="changestyling()">Submit</button>
+</body>
+</html>

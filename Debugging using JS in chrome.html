@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Debugging using JS in Chrome</title>
+<script type="text/javascript">
+	function addValues()
+	// cheeckout figure captured
+	 {
+		var a = document.getElementById("t1").value;
+		var b = document.getElementById("t2").value;
+		document.getElementById("result").innerHTML="Result = "+(a+b);
+		//console.log(a+b);
+	}
+</script>
+</head>
+<body>
+
+	<input id="t1" type="text" placeholder="Text 1" >
+	<br><br>
+	<input id="t2" type="text" placeholder="Text 2" >
+	<br><br>
+	<button onclick="addValues()" id="addbt">Add</button>
+	<h1 id="result">Result = </h1>
+
+</body>
+</html>

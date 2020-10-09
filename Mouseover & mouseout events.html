@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mouseover & Mouseout Events</title>
+	<script type="text/javascript">
+		// Mouseover & Mouseout Events
+     function setNewImage()
+     {
+       document.getElementById("img1").src="https://images.news18.com/ibnlive/uploads/2018/09/Rolls-Royce-Logo.gif";
+     }
+    function   setOldImage()
+    {
+    	 document.getElementById("img1").src="https://d2c7ipcroan06u.cloudfront.net/wp-content/uploads/2019/12/mercedes-logo123-696x392.jpg";
+      //alert();
+    }
+
+	</script>
+</head>
+<body>
+          <img id="img1" onmouseover="setNewImage()" onmouseout="setOldImage()" src="https://d2c7ipcroan06u.cloudfront.net/wp-content/uploads/2019/12/mercedes-logo123-696x392.jpg" width="300">
+</body>
+</html>

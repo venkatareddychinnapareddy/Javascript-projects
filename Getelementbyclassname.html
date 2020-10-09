@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Getelementbyclassname</title>
+	<script type="text/javascript">
+		// getElementsByClassName
+
+		function changestyling()
+		{
+			var mypara = document.getElementsByClassName("mypara");
+
+			// mypara[0].style.color="red"; //works only for one paragraph
+
+			for (var i=0;i<mypara.length;i++)
+			 {
+				mypara[i].style.color= "red";
+			}
+		}
+
+	</script>
+</head>
+<body>
+<p class="mypara">This is Paragraph 1</p>
+
+<p>This is Paragraph 2</p>
+
+<p class="mypara">This is Paragraph 3</p>
+
+<p>This is Paragraph 4</p>
+
+<p class="mypara">This is Paragraph 5</p>
+
+<a class="mypara" href="https://i.pinimg.com/originals/db/b1/06/dbb1061c3c197c93b5dc3743b546384d.jpg" target="_blank">robot here</a>
+<br>
+<button onclick="changestyling()">Submit</button>
+</body>
+</html>

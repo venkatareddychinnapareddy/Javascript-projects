@@ -1,0 +1,33 @@
+.mdiv{
+	border: 2px solid blueviolet;
+	width: 500px;
+	margin: 5px;
+	padding: 10px;
+}
+.newdivclass{
+   background-color: red;
+   	border-radius: 10px;
+}
+.newdivmass{
+	font-weight: bold;
+	font-style: italic;
+}
+div p{
+	color: salmon;
+	font-size: 25px;
+}
+#venky{
+	float: right;
+	margin-top: -500px;
+	width: 600px;
+	height: 700px;
+}
+.animal{
+	background-color: blueviolet;
+	color: black;
+	width: 50px;
+	height: 50px;
+	opacity: 0.4;
+	position: absolute;
+	padding: 10px;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+<script type="text/javascript">
+
+	function fn1()
+	 {
+		var uname=document.getElementById("uname").value;
+		var pass=document.getElementById("pass").value;
+		var regx=/9701269953/;
+		if (regx.test(pass))
+		{
+			alert("Login Successfull");
+		}
+		else 
+		{
+			alert("password is Incorrect");
+		}
+		else if (uname.value.trim=="") 
+		{
+        	document.getElementById("qwerty").style.visibility="visible";
+		}
+
+	}
+</script>
+</head>
+<body>
+<form>
+	<input id="uname" type="email" placeholder="email" required>
+	<label id="qwerty" style="color: red; visibility: hidden;">Invalid Username</label>
+	<br>
+	<input id="pass" type="password" placeholder="password">
+	<br>
+	<button onclick="fn1()">Submit</button>
+</form>
+</body>
+</html>
